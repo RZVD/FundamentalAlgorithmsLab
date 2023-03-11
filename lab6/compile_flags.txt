@@ -1,0 +1,4 @@
+CXX = g++
+CXXFLAGS = -O2 -Wall -Wl,--stack=268435456
+% : %.cpp
+    $(CXX) $(CXXFLAGS) -o $@.exe $<

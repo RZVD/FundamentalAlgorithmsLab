@@ -1,0 +1,107 @@
+For traversal:                  preorder
+    struct Node* {              inorder
+        int val;                postorder
+        Node* left;
+        Node* right;
+    }
+
+    rec(Node* root, Orders order){
+
+        if(!root) return;
+
+        if(preorder) cout << root-> val;
+        rec(root-> left);
+        if(inorder) cout << root-> val;
+        rec(root-> right);
+        if(postorder) cout << root-> val;
+    }
+    
+    ENUM direction{
+        LEFT = 1
+        RIGHT,
+        UP,
+    }
+
+    iter(Node* root, Direction order){
+        int direction = LEFT;
+
+        while(root-> parent && dir != UP){
+            if(dir == LEFT){
+                if(root-> left)
+                    root = root-> left;
+                else {
+                    dir = RIGHT;
+                }
+            }
+            else if(dir == RIGHT){
+                if(root-> right) {
+                    root = root-> right;
+                    dir = LEFT;
+                }
+                else dir = 3;
+            }
+            else if(dir == UP){
+                if(root == root-> parent-> left){
+                    dir = RIGHT;
+                }
+                else if(root == root-> parent-> right){
+                    direction = UP
+                }
+            }
+        }
+
+    }
+
+    options for generate:
+        +Generate Tree like a heap
+        +Can use T1 to generate tree
+        +Build Tree
+
+    perf(){
+        for(i in 100..10000){
+            generate(i)
+            rec
+            it
+        }
+    }
+
+
+for Qsort:
+    Qs(){
+        if(r <= l) ret;
+        mid = pivot();
+        Qs(left, mid - 1);
+        Qs(mid + 1, right);
+    }
+
+    Quicksort Hybridization:    Same O() but faster execution time
+        Qs(){
+            if(r <= l) ret;
+            size = r - l + 1;
+
+            if(size is ok){
+                mid = pivot();
+                Qs(left, mid - 1);
+                Qs(mid + 1, right);
+            }
+            else {
+                insertionSort(arr + left, size); //arr as pointer + left
+            }
+
+        }
+
+        For perf:
+            Operation counting
+            for(i in 100..10000){
+                Fill(a, i);
+                CopyArr();
+                // Run without optimization flags
+                see ss in screnshots folder
+            }
+
+
+            treshold: Start at 30
+            find optimal treshold for max grade
+
+OS - 8 Dec
+QS - 11 Dec upload + 15/22 Dec pres

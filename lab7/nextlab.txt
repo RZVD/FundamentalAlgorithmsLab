@@ -1,0 +1,43 @@
+Dyn order statistics
+    + BST
+
+struct Node {
+    int value;
+    Node* left;
+    Node* right;
+    int size;
+    Node* parent; // Can add, not necessary
+}
+
+    build-tree(n), 
+
+        m    = (l + r) / 2
+        size = r - l + 1 
+
+    select(root, i)              p.341 Corman
+
+        if i == rank
+            return root;
+
+        elsif i < rank return select(root-> left, i);
+        else return select(root-> right, i - rank);
+
+    delete => O(logn)
+        +
+            leaf = NULL
+
+
+for eval:
+    for(n in 100..100000){
+        build-tree(n);
+        for(j in  1..n){
+            r = rand().between(1, n);
+            select(r)
+            delete(r)
+        }
+    }
+
+    count operations related to size(assig, comp, increase, decrease, etc); 
+    should be nlgn
+
+    0.5p AVL/RB

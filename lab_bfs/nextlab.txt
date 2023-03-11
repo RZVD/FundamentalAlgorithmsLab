@@ -1,0 +1,32 @@
+
+dfs_helper(){
+    for(node in nodes) dfs(node)
+}
+
+dfs(node){
+    node.col = g
+
+    for(neighb in node.neighbs){
+        if(nieghb.col)  = w
+            dfs(neighb)
+    }
+    node.col = b
+}
+
+topsort:
+    dfs -> after black push on a stack
+    dfs(node){
+        node.col = Gray
+
+        for(neighb in node.neighbs){
+            if(nieghb.col)  = White
+                dfs(neighb)
+            if(neighb.col = Gray) no topsort possible
+        }
+        node.col = Black
+        stack.push(node);
+    }
+
+Tarjan:
+     node.color = Gray;
+        node.idx = node.

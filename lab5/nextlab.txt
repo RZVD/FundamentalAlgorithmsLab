@@ -1,0 +1,31 @@
+3 pretty_print
+2 transformations MUST O(n)
+
+R1: array
+
+R2:
+    struct R2 {
+        int val;
+        vector<R2*> children;
+    }
+    
+    R1-> R2
+        link nodes as we iterate R1 array
+        mark root when -1 and return it
+
+
+R3:
+    struct R3{
+        int value;
+        R3* left;
+        R3* right;
+    }    
+
+    R2-> R3:
+
+        breadth first generation strategy:
+        recursively generate left first
+
+Pretty pretty_print for each representation:
+    + Doesn't have to be linear
+

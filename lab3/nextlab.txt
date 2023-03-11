@@ -1,0 +1,23 @@
+-- Generate k sorted (linked)lists (total n el, not evenly distributed)
+
+5 -> merge 2 sorted lists
+6 -> min-heap use as pq, entries are structs
+
+----------------------------------
+        struct entry {
+            key,
+            list_idx
+        };
+----------------------------------
+
+8 -> algo + demo
+
+    1.  add 1st el of all lists to pq
+    2.  Pop root -> push to result list
+    3.  Restore heap
+
+10 -> Charts, avg case
+    Fix one, change other
+    Vice-versa
+
+

@@ -1,0 +1,47 @@
+Nextlab:
+    QuickSort
+    Partition
+    Arr: [<= | pivot | >]-- for stability
+
+
+    int i = l - 1
+
+    for j = 1 .. r - 1:
+        if (a[j] < a[p]):
+            i++
+            swap
+
+    i++ 
+    swap(a[i], a[r])
+
+
+    QS(int* a, int l, int r){
+        
+        if(l => r) return;
+
+        int P = Partition(a,l,r)
+        QS(a,l,p-1);
+        QS(a,mid + 1,r);
+    }
+    
+    RandomPivot(a,l,r){
+
+        int i = rand() % (r - l) + l;
+        swap(a[i],a[2])
+        pivot(a, l, r);
+
+    }
+
+    GoDevide(a){
+    
+    }
+
+
+    p.startTimer('ins_rec', size);
+    for(t.0-> 20)
+        ins.rec();
+    p.stopTimer
+
+
+
+    QuickSelect - corman p216

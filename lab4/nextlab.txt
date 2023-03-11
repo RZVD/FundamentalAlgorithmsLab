@@ -1,0 +1,9 @@
+Corman: p270 - insert + search
+
+
+Fill factor:
+    occupied spaces / total;
+    
+Want:
+    avg accesses
+    max accesses

@@ -1,0 +1,34 @@
+struct node {
+    int key;
+    node* adj[]
+    node* parent;
+    int dist
+    Color = enum {
+        WHITE,
+        GREY,
+        BLACK
+    }
+}
+
+    bfs :{
+        for node in nodes {
+            node-> color = wgite
+            node-> dist = inifinity
+            node-> p = null
+        }
+        Q.push(start)
+        start.color = grey
+        start.dist = 0
+
+        while(!q.empty()){
+            current = q.top()
+            for node in current.adj{
+                
+            }
+            q.pop
+            curr->color = BLACK
+        }
+    }
+
+    in corman :
+        p.595
